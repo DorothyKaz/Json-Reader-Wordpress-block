@@ -1,0 +1,14 @@
+<section class="json-reader">
+{# Doesn't read  "attributes" , couldn't figure why #}
+{% if attributes %}
+{{ attributes|json_encode(constant('JSON_PRETTY_PRINT')) }} 
+    <h3>Json Reader – reading file: {{ attributes.fileName }}</h3>
+    <div class="json-reader-content">
+        {% for data in attributes.jsonData %}
+            <pre>
+                {{ data|json_encode(constant('JSON_PRETTY_PRINT')) }} 
+            </pre>
+        {% endfor %}
+    </div>
+    {% endif %}
+</section>
