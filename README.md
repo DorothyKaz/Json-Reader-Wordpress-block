@@ -1,6 +1,6 @@
 # json-reader-block
- 
- ###Description
+
+### Description
  
  Main idea is to read data from a json file, and then render it to the page
 
